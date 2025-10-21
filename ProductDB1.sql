@@ -1,0 +1,13 @@
+CREATE DATABASE ProductDB;
+GO
+
+USE ProductDB;
+
+CREATE TABLE Products (
+    Id INT IDENTITY(1,1) PRIMARY KEY,
+    Name NVARCHAR(100) NOT NULL,
+    Price DECIMAL(10,2) NOT NULL,
+    Quantity INT NOT NULL,
+    CreatedAt DATETIME DEFAULT GETDATE()
+);
+GO
